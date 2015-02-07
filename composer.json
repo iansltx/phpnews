@@ -1,0 +1,18 @@
+{
+    "name": "iansltx/phpnews",
+    "description": "A prettier face on news.php.net.",
+    "type": "project",
+    "homepage": "https://github.com/iansltx/phpnews",
+    "license": "BSD-2-Clause",
+    "authors": [
+        {
+            "name": "Ian Littman",
+            "homepage": "https://twitter.com/iansltx"
+        }
+    ],
+    "require": {
+        "slim/slim": "2.*",
+        "symfony/dom-crawler": "3.0.x-dev",
+        "symfony/css-selector": "3.0.x-dev"
+    }
+}
