@@ -43,7 +43,12 @@ $msg = function($channel, $message) use ($domFactory) {
 };
 
 $app->get('/:channel/:message', function($channel, $message) use ($app, $msg) {
-    $app->response->header('Content-type', 'application/json+hal');
+    if ($app->request->params('view')) {
+        $app->response->header('Content-type', 'text/javascript');
+    } else {
+        $app->response->header('Content-type', 'application/json+hal');
+    }
+
     $app->response->body(json_encode($msg($channel, $message), JSON_PRETTY_PRINT));
 });
 
